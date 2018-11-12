@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    {{note}}
+    <p>
+      {{note}}
+    </p>
   </div>
 </template>
 
@@ -20,5 +22,11 @@ export default {
 .home{
   width: 100%;
   height: auto;
+  p{
+    margin: 50px auto;
+    width: 400px;
+    height: auto;
+    line-height: 30px;
+  }
 }
 </style>
