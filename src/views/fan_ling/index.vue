@@ -2,7 +2,7 @@
   <div class="fan-ling" :style="{width: width, height: height}">
     <!-- 内容 -->
     <el-row v-if="view.viewBool">
-      <el-row class="top" :gutter="20">
+      <el-row class="top">
         <el-col :span="12">
           <div class="logo">
             <img src="../../assets/avatar_fl.jpg" @click="changeLogo" :class="{'active': changeLogoBool}">
@@ -10,11 +10,11 @@
         </el-col>
         <el-col :span="12">
           <div v-if="isBirth" class="title">生日是谁，我不管它快不快乐，我只希望你快乐</div>
-          <div v-else class="title">today is not your birthday~</div>
+          <div v-else class="title">Today is not your birthday~</div>
         </el-col>
       </el-row>
       <el-row class="middle">
-        <el-col :span="24">
+        <el-col :span="24" v-if="isBirth">
           <div>哈哈 还是祝你：</div>
           <div class="text-in">越长越帅</div>
           <div class="text-in">像个250</div>
@@ -24,8 +24,9 @@
           <div class="text-in">......</div>
           <div>以上。</div>
         </el-col>
+        <el-col :span="24" class="k-content" v-else>期待2011，等待2022北京冬奥会<br >心之所向，梦之所往...</el-col>
       </el-row>
-      <el-row class="middle">
+      <el-row class="middle" v-if="isBirth">
         <el-col :span="24">
           <img src="../../assets/birth.png" alt="">
         </el-col>
@@ -154,6 +155,7 @@ export default {
       height: 80px;
       // line-height: 80px;
       color: #fff;
+      word-wrap: break-word;
     }
   }
   .middle{
@@ -171,6 +173,9 @@ export default {
       margin: 0 auto;
       animation: birthMOve 3s;
       animation-iteration-count: infinite;
+    }
+    .k-content{
+      line-height: 80px;
     }
   }
 }
