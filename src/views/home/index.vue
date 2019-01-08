@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <p>
-      {{note}}
+      {{note1}}
+    </p>
+    <p>
+      {{note2}}
     </p>
   </div>
 </template>
@@ -12,7 +15,8 @@ export default {
   inject: ['reload'], // 注入依赖，刷新当前页面
   data () {
     return {
-      note: '那美好的仗我已经打完了，应行的路我已行尽了，当守的道我守住了。从此以后，有公义的冠冕为你留存'
+      note1: '那美好的仗我已经打完了，应行的路我已行尽了，当守的道我守住了',
+      note2: '从此以后，有公义的冠冕为你留存'
     }
   }
 }
@@ -27,6 +31,7 @@ export default {
     width: 400px;
     height: auto;
     line-height: 30px;
+    text-indent: 2em;
   }
 }
 </style>
