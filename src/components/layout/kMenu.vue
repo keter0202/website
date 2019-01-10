@@ -26,14 +26,14 @@
           index: '/home'
         }, {
           name: 'test1',
-          index: '/home',
+          index: '/111',
           submenu: [
-            {index: '/home', name: 'test1-1'},
-            {index: '/home', name: 'test1-2'},
+            {index: '/111', name: 'test1-1'},
+            {index: '/111222', name: 'test1-2'},
           ]
         }, {
           name: 'test2',
-          index: '/home'
+          index: '/222222'
         }],
         menu: {
           active: '' // 默认首页

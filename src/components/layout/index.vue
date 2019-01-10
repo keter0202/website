@@ -102,6 +102,12 @@
     }
   }
 
+  .text-right{
+    button{
+      float: right;
+    }
+  }
+
   /deep/ .vuescroll-content{
     width: 100% !important;
     height: 100% !important;
