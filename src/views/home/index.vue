@@ -18,6 +18,16 @@ export default {
       note1: '那美好的仗我已经打完了，应行的路我已行尽了，当守的道我守住了',
       note2: '从此以后，有公义的冠冕为你留存'
     }
+  },
+  created () {
+    let arr = []
+    arr = [
+      {
+        name: '首页',
+        link: '/home'
+      }
+    ]
+    this.breadcrumb(arr)
   }
 }
 </script>

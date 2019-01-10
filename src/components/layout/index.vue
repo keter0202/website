@@ -5,14 +5,14 @@
         <div class="logo">
           <img src="@/assets/logo.png" width="63" height="63" alt="aitelife">
         </div>
-        <Menu/>
+        <k-menu/>
       </vue-scroll>
     </el-aside>
     <el-container>
       <el-header>
         <el-row type="flex" justify="space-between" align="middle">
           <el-col :span="12">
-            <Breadcrumb/>
+            <bread-crumb/>
           </el-col>
           <el-col :span="8" class="text-right">
             <el-button @click="logout" type="text">退出</el-button>
@@ -29,14 +29,16 @@
 </template>
 
 <script>
-  import Menu from './Menu'
-  import Breadcrumb from './Breadcrumb'
+  import kMenu from '@/components/layout/kMenu'
+  import breadCrumb from '@/components/layout/breadCrumb'
 
   export default {
     name: 'Layout',
     components: {
-      Menu,
-      Breadcrumb
+      // eslint-disable-next-line
+      kMenu,
+      // eslint-disable-next-line
+      breadCrumb
     },
     data () {
       return {
