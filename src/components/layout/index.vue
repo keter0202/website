@@ -31,6 +31,9 @@
 <script>
   import kMenu from '@/components/layout/kMenu'
   import breadCrumb from '@/components/layout/breadCrumb'
+  import {
+    loginOut
+  } from '@/api/login/index'
 
   export default {
     name: 'Layout',
@@ -63,9 +66,15 @@
       }
     },
     methods: {
-      // 登出css
+      // 登出
       logout () {
-        console.log('登出')
+        loginOut().then(res => {
+          console.log(res, '登出')
+          if (res.code === 200) {
+            sessionStorage.removeItem('tokenId')
+            this.$router.replace({path: '/login'})
+          }
+        })
       }
     }
   }

@@ -17,6 +17,11 @@ Axios.interceptors.request.use(
     if (config.method === 'post') {
       config.data = qs.stringify(config.data)
     }
+    const token = sessionStorage.getItem('tokenId') // 写死一个token，获取登录请求的
+    if (token) {
+      // 赋值给headers的key值：Authorization
+      config.headers.Authorization = token
+    }
     return config
   },
   error => {

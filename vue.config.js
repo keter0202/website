@@ -8,5 +8,8 @@ module.exports = {
         data: `@import "@/assets/common.scss";`
       }
     }
+  },
+  devServer: {
+    proxy: 'http://47.98.232.129:8080/Prototype' // 接口跨域
   }
 }

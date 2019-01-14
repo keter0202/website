@@ -28,6 +28,7 @@ export default {
       }
     ]
     this.breadcrumb(arr)
+    document.cookie = 'name=1231321'
   }
 }
 </script>
