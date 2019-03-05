@@ -15,7 +15,7 @@
             <bread-crumb/>
           </el-col>
           <el-col :span="8" class="text-right">
-            <el-button @click="logout" type="text">退出</el-button>
+            <el-button @click="goLogout" type="text">退出</el-button>
           </el-col>
         </el-row>
       </el-header>
@@ -67,7 +67,7 @@
     },
     methods: {
       // 登出
-      logout () {
+      goLogout () {
         loginOut().then(res => {
           console.log(res, '登出')
           if (res.code === 200) {

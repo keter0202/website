@@ -33,11 +33,9 @@ Axios.interceptors.request.use(
 Axios.interceptors.response.use(
   response => {
     if (response.status === 200) {
-      if (response.data.code === 403) {
+      if (response.data.code === 401) {
         Message.error(response.data.msg)
         router.replace('/login')
-      } else if (response.data.code === 400) {
-        Message.error('该账号没有权限访问')
       }
 
       return response.data
