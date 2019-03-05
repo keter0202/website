@@ -5,6 +5,7 @@ import layout from '@/components/layout/index'
 
 import home from '@/views/home/index' // 首页
 import login from '@/views/login/index' // 登录
+import test from '@/views/test/classify'
 
 Vue.use(Router)
 
@@ -26,6 +27,10 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: login
+    }, {
+      path: '/test',
+      name: 'test',
+      component: test
     }
   ]
 })
